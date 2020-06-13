@@ -6,6 +6,10 @@ on init
 
     setprop ro.board.platform msm8937
 
+    # wake gesture
+    chown system system /sys/class/input/input1/device/wake_gesture
+    chmod 0664 /sys/class/input/input1/device/wake_gesture
+
 # separate copy needed to use /sbin/linker64 instead of /system/bin/linker64
 service sbinqseecomd /sbin/qseecomd
     oneshot
@@ -16,3 +20,6 @@ service sbinqseecomd /sbin/qseecomd
 
 on property:ro.crypto.state=encrypted
     start sbinqseecomd
+
+on boot
+   write /sys/class/input/input1/device/wake_gesture 1
