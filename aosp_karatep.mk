@@ -17,7 +17,10 @@
 $(call inherit-product, device/lenovo/karatep/full_karatep.mk)
 
 # Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := aosp_karatep
