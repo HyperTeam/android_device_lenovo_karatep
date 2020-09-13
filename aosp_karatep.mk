@@ -23,6 +23,10 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 
+EVO_DONATE_URL := https://PayPal.me/vivekachoooz
+EVO_MAINTAINER := Achooz
+EVO_SUPPORT_URL := https://t.me/k6_development
+
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := aosp_karatep
 BOARD_VENDOR := lenovo
