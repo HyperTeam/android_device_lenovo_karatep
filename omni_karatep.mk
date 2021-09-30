@@ -20,7 +20,3 @@ $(call inherit-product, device/lenovo/karatep/full_karatep.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 PRODUCT_NAME := omni_karatep
-
-# AVB
-PRODUCT_SUPPORTS_BOOT_SIGNER := true
-PRODUCT_VERITY_SIGNING_KEY := build/target/product/security/verity
